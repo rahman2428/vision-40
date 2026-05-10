@@ -11,11 +11,14 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     minify: 'terser',
+    cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: undefined,
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true,
   },
   server: {
     middlewareMode: false
